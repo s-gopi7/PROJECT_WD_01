@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="nut.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+*{
+    margin:0px;
+    padding:0px;
+     text-decoration:none;
+     list-style:none;
+    box-sizing:border-box;
+
+
+}
+nav{
+    width:100%;
+    height:70px;
+align-items:center
+display:flex;
+justify-content:space-between;
+    line-height:75px;
+    padding:0px 100px;
+    position: fixed;
+    background-image: linear-gradient(#033747,#012733);
+}
+nav ul{
+    float: right;
+    margin-right:20px;
+gap:30px;
+display:flex;
+}
+.logo{
+color:white;
+}
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+line-height:80px;
+margin:0 5px;
+}
+nav ul li a{
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0px 30px;
+    color:white;
+    text-decoration: none;
+}
+.menu-icon{
+color:white;
+font-size: 30px;
+display:none;
+}
+nav li a:hover{
+    color:#ff8c69;
+    transition: all 0.4s ease 0s;
+}
+.image1{
+    height:80px;
+    width:90px;
+    text-transform: uppercase;
+    float:left;
+    letter-spacing: 1.0px;
+    padding:10px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.home{
+display:flex;
+border:1px solid;
+justify-content-right;
+background-image: url("https://image.freepik.com/free-photo/healthy-nutrition-ingredients-top-view-different-diet-food-background-copyspace_118925-228.jpg");
+background-size:cover;
+padding-top:17rem;
+height:100vh;
+padding-bottom:10rem;
+}
+.head1{
+color:orange;
+font-size:50px;
+font-family:"roboto";
+text-align:center;
+font-weight:bold;
+}
+.para1{
+color:white;
+font-size:20px;
+padding:1rem 0;
+line-height:1.8;
+text-align:center;
+}
+.about-section{
+background-color:white;
+padding:3px;
+margin:2px;
+text-align:center;
+align-items:center;
+
+}
+.gopi{
+display:flex;
+justify-content:center;
+flex-direction:row;
+border-radius:8%;
+align-items:center;
+margin:20px;
+padding:10px;
+}
+.gopi1{
+display:flex;
+justify-content:flex-start;
+flex-direction:column;
+border-radius:8%;
+padding:10px;
+margin:10px;
+align-items:center;
+box-shadow: 0px 0px 12px grey;
+height:400px;
+width:600px;
+}
+.Box:hover{
+transform:scale(1.1);
+transition:2s;
+}
+.wcu-card-image{
+height:250px;
+     width:220px;
+    text-transform: uppercase;
+    float:left;
+    letter-spacing: 1.5px;
+    padding:10px;
+    border-radius:10%;
+    cursor:pointer;
+    text-align:center;
+
+}
+.wcu-card-title{
+color:black;
+font-size:30px;
+font-family:"roboto";
+text-align:center;
+font-weight:bold;
+}
+.calpara{
+color:grey;
+font-size:20px;
+padding:1rem 0;
+line-height:1.8;
+text-align:center;
+}
+.wcu-section-heading{
+color:black;
+font-size:50px;
+font-family:"roboto";
+text-align:center;
+font-weight:bold;
+}
+.wcu-section-description{
+color:orange;
+font-size:25px;
+line-height:1.8;
+text-align:center;
+font-family:"roboto";
+font-weight:bold;
+}
+.container1 {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0.3, 0.2, 0.2, 0.1);
+    text-align: center;
+    width: 90vw;
+    height: 85vh;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    width: 30%;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #765db2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #a18cd1;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: left;
+    display: flex;
+}
+
+.recipe {
+    background-color: #f8f8f8;
+    padding: 15px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.recipe h3 {
+    margin: 0 0 10px;
+}
+.bg-con{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%,pink 100%,blue 100%,green 100%,red 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.bhuvi{
+background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 70vh;
+}
+.follow-us-section-heading{
+  text-align: center;
+  color: white;
+  font-family: "Roboto";
+  font-size:40px;
+  font-weight: 800px;
+  padding:30px;
+  text-decoration: none;
+
+}
+.follow-us-icon-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+  margin: 15px;
+  padding-top: 22px;
+  padding-bottom: 14px;
+  padding-right: 16px;
+  padding-left: 22px;
+}
+.icon {
+  color: #d0b200;
+  font-size: 35px;
+}
+.mahi{
+display:flex;
+justify-content:center;
+flex-direction:row;
+
+}
+.footerContainer{
+width:100%
+padding: 70px 30px 20px;
+}
+.socialIcons{
+display:flex;
+justify-content:center;
+}
+.socialIcons a{
+text-decoration:none;
+padding:10px;
+background-color:white;
+margin:10px;
+border-radius: 50%;
+height:55px;
+width:55px;
+}
+.socialIcons a i{
+font-size:2em;
+color:black;
+opacity:0.9;
+}
+.socialIcons a:hover{
+background-color: grey;
+transition:0.5s;
+border:1px solid linear-gradient(to bottom right,blue,#e100ff,red,orange,yellow);
+background-image:linear-gradient(to bottom right,blue,#e100ff,red);
+z-index:0;
+}
+.socialIcons a:hover i{
+background-color: white;
+transition:0.5s;
+}
+.footer-section {
+ background-color: #0d2436;
+padding-bottom:5px;
+pading-top:5px;
+text-align:center;
+display:flex;
+justify-content:center;
+flex-direction:column;
+height:30vh;
+wight:100vw;
+
+
+}
+.footer-section-mail-id {
+  color: #959ead;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.footer-section-address {
+  color: #959ead;
+  font-family: "Roboto";
+  font-size: 20px;
+}
+
+
+</style>
+  </head>
+<body>
+    <nav>
+        <div class="logo">
+<img src="https://static.vecteezy.com/system/resources/previews/019/604/082/original/nutrition-logo-logo-nutrition-logo-free-vector.jpg" class="image1" />
+                    </div>
+        <ul id="menuList">
+            <li><a href="#home"> Home</a></li>
+            <li><a href="#aboutSection"> About</a></li>
+            <li><a href="#categorySection"> Category</a></li>
+            <li><a href="#followSection"> Follow Us</a></li>
+        </ul>
+<div class="menu-icon">
+<i class="fa-solid fa-bars" onclick="toggleMenu()"></i></div>
+    </nav>
+</div>
+
+<div class="home" id="home">
+<div class="content">
+       <h1 class="head1"> Your <span class="pro">Nutrition </span> Hub</h1> 
+       <p class="para1">Explore expert tips, meal plans, and the latest research on nutrition, all in one place. From superfoods to sustainable eating, we break down complex topics into simple, actionable advice. No matter where you are on your health journey, Your Nutrition Hub is here to support you every step of the way.
+
+
+</p>
+</div>
+</div>
+<div class="about-section" id="aboutSection">
+                    <h1 class="wcu-section-heading">About Nutrition</h1>
+                    <p class="wcu-section-description">
+                        The Key to a Healthy Life
+                    </p>
+                
+<div class="gopi">
+                 <div class="gopi1 shadow col-md-4 mb-3 p-3">
+                                                                              
+                            <img src="https://ayvpaqxydo.cloudimg.io/v7/https://gearuptofit.com/wp-content/uploads/2019/10/CALORIE-counting-counter-application-Medical-eating-healthy-Diet-concept.jpg" class="wcu-card-image" />
+                            <h1 class="wcu-card-title mt-3">About Calories</h1>
+                            <p class="calpara"> Calories are a measure of the energy that food provides to the body.  </p>
+
+                        </div>
+ <div class="gopi1 shadow col-md-4 mb-3 p-3">
+                                                                              
+                            <img src="https://amerikanki.com/wp-content/uploads/2020/09/Sources-of-Protein-for-Vegetarians.jpeg" class="wcu-card-image" />
+                            <h1 class="wcu-card-title mt-3">About Proteins</h1>
+                            <p class="calpara">Proteins are vital macronutrients essential for building and producing enzymes.  </p>
+
+                        </div>
+</div>
+<div class="gopi">
+                 <div class="gopi1 shadow col-md-4 mb-3 p-3">
+                                                                              
+                            <img src="https://tse3.mm.bing.net/th?id=OIP.OUwCPRUfYGShjeNQr2pDwQHaFm&pid=Api&P=0&h=1500" class="wcu-card-image" />
+                            <h1 class="wcu-card-title mt-3">About Fats</h1>
+                            <p class="calpara"> Fats are essential macronutrients that provide energy, support cell growth. </p>
+
+                        </div>
+ <div class="gopi1 shadow col-md-4 mb-3 p-3">
+                                                                              
+                            <img src="https://livongo.zendesk.com/hc/article_attachments/1500000060462/istockphoto-1081051950.jpg" class="wcu-card-image" />
+                            <h1 class="wcu-card-title mt-3">About Carbohydrates</h1>
+                            <p class="calpara">Carbohydrates are essential macronutrients that provide the body's primary source of energy.</p>
+
+                        </div>
+</div>
+</div>
+<div class="bg-con" id="categorySection">
+<div class="container1">
+        <h1>Find Nutritional Information Instantly</h1>
+        <div class="input-container">
+            <input type="text" id="searchInput" placeholder="Enter a valid food item (e.g., egg)">
+            <button id="searchButton">Search</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    </div>
+<div class="bhuvi" id="followSection">
+
+            <h1 class="follow-us-section-heading">Follow Us</h1>
+         
+     
+            <div class="footerContainer">
+              <div class="socialIcons">
+                  <a href=""><i class="fa-brands fa-square-x-twitter "></i></a>
+                  <a href=""><i class="fa-brands fa-square-instagram "></i></a>
+                      <a href=""><i class="fa-brands fa-square-google-plus "></i></a>
+
+                      <a href=""><i class="fa-brands fa-linkedin "></i></a>
+                            <a href=""><i class="fa-brands fa-square-youtube "></i></a>
+
+   
+  </div>             
+                            
+</div>
+   
+<h1 class="footer-section-mail-id">@nutrition.com</h1>
+            <p class="footer-section-address">
+              123 JNTU-hitech city road,madhapur,hyderabad, telangana, India.
+ </p>
+          </div>
+
+
+    <!-- Script JS -->
+
+    <script src="./nut.js">
+</script>
+                    
+</body>
+</html>
